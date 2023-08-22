@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 #### 如何选择正确的 django-tidb 版本
 
-- django-tidb 的版本应该和 django 的版本匹配，例如，如果你使用的是 `django 4.2.x`，你应该安装 `django-tidb 4.2.x`（最小版本号不需要完全一致，推荐使用各自的最新小版本）。你可以在 [django-tidb 官方文档](https://github.com/pingcap/django-tidb#installing-django-tidb)
+- django-tidb 的版本应该和 django 的版本匹配，例如，如果你使用的是 `django 4.2.x`，你应该安装 `django-tidb 4.2.x`（最小版本号不需要完全一致，推荐使用各自的最新小版本）。更多信息请参考 [django-tidb 官方文档](https://github.com/pingcap/django-tidb#installing-django-tidb)
 
 #### 安装 mysqlclient 时遇到问题
 
@@ -77,6 +77,7 @@ pip install -r requirements.txt
     TiDB Serverless 要求使用 secure connection，由于 mysqlclient 的 `ssl_mode` 默认为 `PREFERRED`，所以不需要你手动指定 `CA_PATH`，设置为空即可。但如果你有特殊原因需要手动指定 `CA_PATH`，可以参考 [TiDB Cloud 文档](https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-clusters#root-certificate-default-path)获取不同操作系统下证书的路径。
 
 6. 保存文件。
+</details>
 
 <details>
 
