@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Player List <a href="{% url 'player-create' %}" style="font-size: 1rem;">create new player</a></h2>
+{% if players %}
+<ul>
+  {% for p in players %}
+  <li>
+    {{ p.id }}. name: {{ p.name }}, coins: {{ p.coins }}, goods: {{ p.goods }}
+    <a href="{% url 'player-detail' p.id %}" class="ml-3">View</a>
+    <a href="{% url 'player-delete' p.id %}" class="ml-3">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no players.</p>
+{% endif %}
+
+<div class="d-flex">
+<form action="{% url 'player-bulk-create' %}" method="POST">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-success">Bulk Generate 10 Players</button>
+</form>
+
+<form action="{% url 'player-delete-all' %}" method="POST" style="margin-left: 1rem;">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Delete All</button>
+</form>
+{% endblock %}
+</div>

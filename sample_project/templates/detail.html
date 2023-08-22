@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Player Details #{{player.id}}</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{ player.name }}</dd>
+            <dt class="col-sm-3">Coins</dt>
+            <dd class="col-sm-9">{{ player.coins }}</dd>
+            <dt class="col-sm-3">Goods</dt>
+            <dd class="col-sm-9">{{ player.goods }}</dd>
+            <dt class="col-sm-3">Created at</dt>
+            <dd class="col-sm-9">{{ player.created_at }}</dd>
+            <dt class="col-sm-3">Updated at</dt>
+            <dd class="col-sm-9">{{ player.updated_at }}</dd>
+            <dd>
+                <a href="{% url 'player-update' player.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'player-delete' player.id %}" class="btn btn-danger">Delete</a>
+            </dd>
+        </dl>
+
+    </div>
+</div>
+
+{% endblock %}
