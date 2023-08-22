@@ -93,3 +93,8 @@ class PlayerTrade(FormView):
             form.add_error(None, "Unknown error occurred.")
             return self.form_invalid(form)
         return HttpResponseRedirect(self.get_success_url())
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["has_enough_players"] = Player.objects.count() >= 2
+        return context

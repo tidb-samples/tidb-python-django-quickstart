@@ -78,6 +78,8 @@ If this is your first time installing mysqlclient, you may encounter some proble
 
 6. Save the `.env` file.
 
+</details>
+
 <details>
 
 <summary><b>(Option 2) TiDB Dedicated</b></summary>
