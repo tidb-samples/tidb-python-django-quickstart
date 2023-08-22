@@ -1,6 +1,6 @@
 # 使用 Django 和 TiDB 构建应用程序
 
-English | [中文](/README-zh.md)
+[English](/README.md) | 中文
 
 这是 PingCAP 为 Django 编写的使用 TIDB 构建应用程序的示例项目。
 
