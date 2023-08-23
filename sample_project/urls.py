@@ -27,5 +27,5 @@ urlpatterns = [
     path("players/<int:pk>/", views.PlayerDetailView.as_view(), name="player-detail"),
     path("players/<int:pk>/update/", views.PlayerUpdateView.as_view(), name="player-update"),
     path("players/<int:pk>/delete/", views.PlayerDeleteView.as_view(), name="player-delete"),
-    path("players/trade/", views.PlayerTrade.as_view(), name="player-trade"),
+    path("players/trade/", views.PlayerTradeView.as_view(), name="player-trade"),
 ]

@@ -73,7 +73,7 @@ class PlayerDeleteView(DeleteView):
     success_url = reverse_lazy("player-list")
 
 
-class PlayerTrade(FormView):
+class PlayerTradeView(FormView):
     template_name = "transaction.html"
     form_class = TradeForm
     initial = {"goods": 1, "coins": 10}

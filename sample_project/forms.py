@@ -5,19 +5,15 @@ from sample_project.models import Player
 
 
 class TradeForm(forms.Form):
-    buyer_id = forms.ModelChoiceField(
-        label="Buyer ID", queryset=Player.objects.all(), required=True
-    )
-    seller_id = forms.ModelChoiceField(
-        label="Seller ID", queryset=Player.objects.all(), required=True
-    )
+    buyer = forms.ModelChoiceField(label="Buyer", queryset=Player.objects.all(), required=True)
+    seller = forms.ModelChoiceField(label="Seller", queryset=Player.objects.all(), required=True)
     goods = forms.IntegerField(label="Buy goods", required=True)
     coins = forms.IntegerField(label="Need coins", required=True)
 
     def clean(self):
         cleaned_data = super().clean()
-        buyer = cleaned_data.get("buyer_id")
-        seller = cleaned_data.get("seller_id")
+        buyer = cleaned_data.get("buyer")
+        seller = cleaned_data.get("seller")
         goods = cleaned_data.get("goods")
         coins = cleaned_data.get("coins")
 
@@ -33,8 +29,8 @@ class TradeForm(forms.Form):
 
     @transaction.atomic
     def save(self):
-        buyer = self.cleaned_data.get("buyer_id")
-        seller = self.cleaned_data.get("seller_id")
+        buyer = self.cleaned_data.get("buyer")
+        seller = self.cleaned_data.get("seller")
         goods = self.cleaned_data.get("goods")
         coins = self.cleaned_data.get("coins")
 
