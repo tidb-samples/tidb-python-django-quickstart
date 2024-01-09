@@ -8,7 +8,7 @@ This is an example of a game where each player has three attributes: `name`, `co
 
 ## Prerequisites
 
-- [Python **3.10** or higher](https://www.python.org/downloads/)
+- [Python 3.8 or higher](https://www.python.org/downloads/)
 - [Git](https://git-scm.com/downloads)
 - A TiDB cluster. If you don't have a TiDB cluster, you can create one as follows:
   - (Recommended) Follow [Creating a TiDB Serverless Cluster](https://docs.pingcap.com/tidbcloud/dev-guide-build-cluster-in-cloud) to create your own TiDB Cloud cluster.

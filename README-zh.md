@@ -8,7 +8,7 @@
 
 ## 前置要求
 
-- 推荐 [Python 3.10 及以上版本](https://www.python.org/downloads/)
+- 推荐 [Python 3.8 及以上版本](https://www.python.org/downloads/)
 - [Git](https://git-scm.com/downloads)
 - TiDB 集群。如果你还没有 TiDB 集群，可以按照以下方式创建：
   - （推荐方式）参考[创建 TiDB Serverless 集群](https://docs.pingcap.com/tidbcloud/dev-guide-build-cluster-in-cloud)，创建你自己的 TiDB Cloud 集群。
